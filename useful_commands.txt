@@ -1,0 +1,10 @@
+source /opt/ros/humble/setup.bash				appena si fa partire la macchina
+source ./install/local_setup.bash 				nella cartella cha ha /src dentro e dopo colcon build
+colcon build 							nella cartella che ha /src dentro
+ros2 run turtlesim turtlesim_node				per far partire turtle
+ros2 interface show tutorial_interfaces/msg/Sphere		nella cartella che ha /src dentro
+ros2 interface show tutorial_interfaces/srv/[ServiceName]	per controllare se esiste un determinato servizio 
+
+rosdep install -i --from-path src --rosdistro humble -y
+
+

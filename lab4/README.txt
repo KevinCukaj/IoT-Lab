@@ -12,8 +12,4 @@ Per far ruotare la tartaruga in base alla richiesta esplicita di un servizio: (O
  ros2 run turtlesim turtlesim_node		(per far partire turtlesin)
  ros2 run my_package turtle_service_server	(per far partire il server del servizio) 
 						(tale server aspetta le richeste del client per poter interagire con la tartaruga)
-<<<<<<< HEAD
  ros2 run my_package turtle_service_client 1	(per poter richiedere il servizio TurnTurtle e dunque far ruotare la tartaruga)
-=======
- ros2 run my_package turtle_service_client 1	(per poter richiedere il servizio TurnTurtle e dunque far ruotare la tartaruga)
->>>>>>> 27d3f1c4176713f917dcf64a654e0783d5573753

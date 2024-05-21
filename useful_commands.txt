@@ -5,6 +5,32 @@ ros2 run turtlesim turtlesim_node				per far partire turtle
 ros2 interface show tutorial_interfaces/msg/Sphere		nella cartella che ha /src dentro
 ros2 interface show tutorial_interfaces/srv/[ServiceName]	per controllare se esiste un determinato servizio 
 
-rosdep install -i --from-path src --rosdistro humble -y
+rosdep install -i --from-path src --rosdistro humble -y		per installare dipendenze
+
+ros2 topic echo "{topic name}"					per leggere cosa si scrive in un topic
+
+
+#######################################################################################################################
+
+Per far girare decentemente Gazebo su dispositivi poco performanti:
+	export LIBGL_ALWAYS_INDIRECT=0
+	export LIBGL_ALWAYS_SOFTWARE=1
+
+ign gazebo f.sdf						per far partire Gazebo e il file f.sdf
+
+#######################################################################################################################
+
+su tre terminali diversi
+	FAR PARTIRE UN PROGETTO GAZEBO SALVATO IN UN FILE
+ 	ign gazebo vehicle_blue_world.sdf
+
+	BRIDGE ROS
+ 	ros2 run ros_gz_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist
+
+	LAUNCH FILEros
+ 	ros2 launch launch_gazebo.py
+
+
+ign topic -i --topic 
 
 
